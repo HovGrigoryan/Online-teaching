@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"><head>
+<meta charset="utf-8">
+<title>Akadimia HTML Template | Sign Up</title>
+<!-- Stylesheets -->
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet">
+<link href="/css/responsive.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- Color Switcher Mockup -->
+<link href="/css/color-switcher-design.css" rel="stylesheet">
+<!-- Color Themes -->
+<link id="theme-color-file" href="/css/color-themes/theme-one.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+<link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+	<!--[if lt IE 9]>
+	<script src="/js/respond.js"></script><![endif]-->
+	<script th:inline="javascript">
+		let user = [[${user}]];
+		console.log(user);
+	</script>
+
+</head>
+
+<body class="">
+
+<div class="page-wrapper">
+ 	
+    <!-- Preloader -->
+    <div class="preloader"></div>
+ 	
+	<!-- Main Header-->
+    <header class="main-header">
+    	
+    	<!-- Header Upper -->
+		<div th:insert="fragments/header.html :: #header"></div>
+        <!--End Header Upper-->
+        
+		<!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><span class="icon fa fa-remove"></span></div>
+            
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="index.html"><img src="/images/logo.png" alt="" title=""></a></div>
+                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+            </nav>
+        </div><!-- End Mobile Menu -->
+		
+    </header>
+    <!--End Main Header -->
+	
+	<!-- Sign Up Section -->
+    <section class="signup-section" style="background-image:url(/images/background/pattern-4.png)">
+    	<div class="auto-container">
+			<div class="logo">
+				<a href="index.html"><img src="/images/logo-3.png" alt="" /></a>
+			</div>
+        	<div class="inner-container">
+            	<h2>A Warm Welcome To <span class="theme_color">Akadimia</span></h2>
+				<div class="text">Sign Up and Start Learning</div>
+				
+				<!-- Login Form -->
+				<div class="styled-form">
+
+
+						<div class="validation-error alert alert-danger">
+
+						</div>
+
+						<div class="row clearfix">
+
+							<div class="form-group col-lg-6 col-md-12 col-sm-12">
+								<label>First Name</label>
+								<input type="text" placeholder="First Name" required id="firstName">
+							</div>
+
+							<div class="form-group col-lg-6 col-md-12 col-sm-12">
+								<label>Last Name</label>
+								<input type="text" placeholder="Last Name" required id="lastName">
+							</div>
+
+							<!-- Form Group -->
+							<div class="form-group col-lg-6 col-md-12 col-sm-12">
+								<label>Phone Number</label>
+								<input type="text" placeholder="+1 (800) 123-4567" required id="phoneNumber" value="+">
+							</div>
+							
+							<!-- Form Group -->
+							<div class="form-group col-lg-6 col-md-12 col-sm-12">
+								<label>Email Address</label>
+								<input type="email" placeholder="abcd@gmail.com" required id="email">
+							</div>
+							
+							<!-- Form Group -->
+							<div class="form-group col-lg-6 col-md-12 col-sm-12">
+								<label>Password</label>
+								<input type="password" placeholder="Password" required id="password">
+							</div>
+
+							<!-- Form Group -->
+							<div class="form-group col-lg-6 col-md-12 col-sm-12">
+								<label>Confirm Password</label>
+								<input type="password" placeholder="Confirm Password" required id="rePassword">
+							</div>
+
+
+<!--							<div class="form-group col-lg-12 col-md-12 col-sm-12">-->
+<!--								<select class="custom-select-box" id="countryOrigin">-->
+<!--									<option value="0">Select Country of origin</option>-->
+<!--								</select>-->
+<!--							</div>-->
+
+<!--							<div class="form-group col-lg-12 col-md-12 col-sm-12 clonableLanguage">-->
+<!--								<div class="form-group col-lg-6 col-md-6 col-sm-6">-->
+<!--									<select class="custom-select-box chooseLang">-->
+<!--										<option value="0">Choose language</option>-->
+<!--									</select>-->
+
+<!--&lt;!&ndash;									<span class="adddMoreLanguage">Add another language</span>&ndash;&gt;-->
+
+<!--								</div>-->
+
+<!--								<div class="form-group col-lg-6 col-md-6 col-sm-6">-->
+<!--									<select class="custom-select-box language-level">-->
+<!--										<option value="0">Choose level</option>-->
+<!--									</select>-->
+<!--								</div>-->
+<!--							</div>-->
+
+							<div class="col-lg-12 col-md-12 col-sm-12">
+
+								<b>Choose your timezone</b>
+
+								<select id="timezoneSelect" class="custom-select-box col-lg-12 col-md-12 col-sm-12">
+									<option value="0">Select timezone</option>
+
+								</select>
+							</div>
+
+							<div class="form-group col-lg-6 col-md-12 col-sm-12">
+								<form id="avatarImageForm" enctype="multipart/form-data" method="post">
+									<label>Select Image</label>
+									<input type="file" name="avatar" required id="avatar">
+								</form>
+
+							</div>
+							<div class="form-group col-lg-6 col-md-12 col-sm-12">
+								<form id="avatarImageForm1" enctype="multipart/form-data" method="post">
+									<label>Select The second Image</label>
+									<input type="file" name="avatar" required id="avatar1">
+								</form>
+
+							</div>
+
+							<!-- Form Group -->
+							<div class="form-group" id="avatarPreview">
+								<img src="" id="prevIMG">
+							</div>
+							<div class="form-group" id="avatarPreview1">
+								<img src="" id="prevIMG1">
+							</div>
+
+							<!-- Signup Info Tabs-->
+							<div class="signup-info-tabs col-lg-12 col-md-12 col-sm-12">
+
+								<!-- Signup Tabs-->
+								<div class="signup-tabs tabs-box">
+									<!-- Tabs Container -->
+									<div class="tabs-content">
+										<!-- Tab / Active Tab -->
+										<div class="tab active-tab" id="prod-instructor">
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-6 col-md-6 col-sm-6 text-right">
+								<button type="button" class="theme-btn btn-style-one" onclick="regStudent()"><span
+										class="txt">Submit</span></button>
+							</div>
+							
+							<div class="form-group col-lg-12 col-md-12 col-sm-12">
+								<div class="users">Already have an account? <a href="login.html">Sign In Now</a></div>
+							</div>
+							
+						</div>
+
+				</div>
+				
+            </div>
+			
+			<!-- Copyright -->
+			<div class="copyright">Copyright © 2020 AuburnForest</div>
+			
+        </div>
+    </section>
+	
+</div>
+<!-- End pagewrapper -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
+<div class="loader-wrapper">
+	<img src="/images/45.gif" alt="loader">
+</div>
+<!-- Color Palate / Color Switcher -->
+
+
+<script src="/js/jquery.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/appear.js"></script>
+<script src="/js/isotope.js"></script>
+<script src="/js/owl.js"></script>
+<script src="/js/wow.js"></script>
+<script src="/js/jquery.countdown.js"></script>
+<!--<script src="/js/jquery-ui.js"></script>-->
+<script src="/js/script.js"></script>
+<script src="/js/color-settings.js"></script>
+<script src="/js/student-reg.js"></script>
+
+</body>
+</html>

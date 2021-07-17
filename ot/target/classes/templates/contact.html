@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Akadimia HTML Template | Contact</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Color Switcher Mockup -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Color Themes -->
+    <link id="theme-color-file" href="css/color-themes/theme-one.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script><![endif]-->
+    <script th:inline="javascript">
+        let user = [[${user}]];
+        console.log(user);
+    </script>
+</head>
+
+<body class="">
+
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Main Header-->
+    <div th:insert="fragments/header.html :: #header"></div>
+    <!--End Main Header -->
+
+    <!-- Sidebar Page Container -->
+    <div class="sidebar-page-container">
+        <div class="auto-container">
+            <div class="row clearfix">
+
+                <!-- Content Side -->
+                <div class="content-side col-lg-9 col-md-12 col-sm-12">
+                    <!-- Sec Title -->
+                    <div class="sec-title">
+                        <h4>Contact Us</h4>
+                    </div>
+                    <div class="clearfix col-lg-12 col-md-12 col-sm-12">
+                        <div class="styled-form">
+                            <form style="border:1px solid rgba(0,0,0,.1); width: 60%; margin: 0 auto; padding: 25px; background-color: white; margin-bottom: 20px; border-radius: 15px">
+
+                                <!-- Form Group -->
+                                <div class="form-group">
+                                    <input type="text" placeholder="Message Subject" required id="subject">
+                                </div>
+
+                                <div class="form-group">
+                                    <textarea name="" cols="30" rows="10" id="content"></textarea>
+                                </div>
+                            </form>
+                            <div class="form-group text-center">
+                                <button type="button" class="theme-btn btn-style-one" id="sendMessage"><span class="txt">Send</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-info-section">
+                        <h6>Address</h6>
+                        <div class="row clearfix">
+                            <div class="column col-lg-6 col-md-6 col-sm-12">
+                                <div class="text">451 Thurstin Ave #211, Bowling Green, OH, 43402 <br> 500 Darby Dr,
+                                    Kerens, TX, 75144 <br> NYC, USA
+                                </div>
+                                <ul class="social-box">
+                                    <li class="facebook"><a href="contact.html#" class="fa fa-facebook"></a></li>
+                                    <li class="twitter"><a href="contact.html#" class="fa fa-twitter"></a></li>
+                                    <li class="linkedin"><a href="contact.html#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="column col-lg-6 col-md-6 col-sm-12">
+                                <ul class="contact-info-list">
+                                    <li><span class="icon"><img src="images/icons/email.png" alt=""/></span><a
+                                            href="mailto:infoakamidia@gmail.com">infoakamidia@gmail.com</a><a
+                                            href="mailto:info@yourcompany.com">info@yourcompany.com</a></li>
+                                    <li><span class="icon"><img src="images/icons/phone.png" alt=""/></span><a
+                                            href="tel:+1-123-456-7890">+1 (123) 456-7890</a><a
+                                            href="tel:+1-123-456-7890">+1 (123) 456-7890</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Boxed -->
+                    <!--					<div class="map-boxed">-->
+                    <!--						&lt;!&ndash;Map Outer&ndash;&gt;-->
+                    <!--						<div class="map-outer">-->
+                    <!--							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805184.6331292129!2d144.49266890254142!3d-37.97123689954809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1574408946759!5m2!1sen!2s" allowfullscreen=""></iframe>-->
+                    <!--						</div>-->
+                    <!--					</div>-->
+                </div>
+
+<!--                &lt;!&ndash; Sidebar Side &ndash;&gt;-->
+<!--                <div class="sidebar-side col-lg-3 col-md-12 col-sm-12">-->
+<!--                    <aside class="sidebar">-->
+<!--                        <div class="info-blocks-outer">-->
+
+<!--                            &lt;!&ndash; Info Contact Box &ndash;&gt;-->
+<!--                            <div class="info-contact-box">-->
+<!--                                <div class="box-inner">-->
+<!--                                    <div class="icon-box">-->
+<!--                                        <span class="icon flaticon-information-1"></span>-->
+<!--                                    </div>-->
+<!--                                    <h6>Help Center</h6>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Info Contact Box &ndash;&gt;-->
+<!--                            <div class="info-contact-box">-->
+<!--                                <div class="box-inner">-->
+<!--                                    <div class="icon-box">-->
+<!--                                        <span class="icon flaticon-goal"></span>-->
+<!--                                    </div>-->
+<!--                                    <h6>Careers</h6>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Info Contact Box &ndash;&gt;-->
+<!--                            <div class="info-contact-box">-->
+<!--                                <div class="box-inner">-->
+<!--                                    <div class="icon-box">-->
+<!--                                        <span class="icon flaticon-edit"></span>-->
+<!--                                    </div>-->
+<!--                                    <h6>Blog</h6>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Info Contact Box &ndash;&gt;-->
+<!--                            <div class="info-contact-box">-->
+<!--                                <div class="box-inner">-->
+<!--                                    <div class="icon-box">-->
+<!--                                        <span class="icon flaticon-coding"></span>-->
+<!--                                    </div>-->
+<!--                                    <h6>Developer Area</h6>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </aside>-->
+<!--                </div>-->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Footer -->
+    <div th:insert="fragments/footer.html :: #footer"></div>
+
+</div>
+<!-- End pagewrapper -->
+
+<!-- Sidebar Nav -->
+<div th:insert="fragments/sidebar.html :: #sidebar"></div>
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/wow.js"></script>
+<!--<script src="js/jquery-ui.js"></script>-->
+<script src="js/script.js"></script>
+<script src="js/indexPage.js"></script>
+<script src="js/contact.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Akadimia HTML Template | Course Detail</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Color Switcher Mockup -->
+    <link href="css/color-switcher-design.css" rel="stylesheet">
+    <!-- Color Themes -->
+    <link id="theme-color-file" href="css/color-themes/theme-one.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script><![endif]-->
+    <link rel="stylesheet" href="/css/vanilla-calendar-min.css">
+    <script src="/js/vanilla-calendar-min.js"></script>
+    <script th:inline="javascript">
+        let user = [[${user}]];
+        console.log(user);
+    </script>
+</head>
+
+<body class="">
+
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Main Header-->
+    <div th:insert="fragments/header.html :: #header"></div>
+    <!--End Main Header -->
+
+    <!-- Course Detail Section -->
+    <div class="course-detail-section">
+        <div class="auto-container">
+
+
+            <div class="upper-content" id="teacher-detail">
+                <div class="row clearfix">
+
+                    <!-- Left Column -->
+                    <div class="left-column col-lg-5 col-md-12 col-sm-12">
+                        <div class="inner-column" id="teacher-intro-video">
+
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="right-column col-lg-7 col-md-12 col-sm-12">
+                        <div class="inner-column" style="display: flex; flex-direction: column">
+                            <div style="display: flex">
+                                <div>
+                                    <h2 id="teacher-subjectTitle"></h2>
+                                    <div class="sub-text" id="teacher-subjectSescription"></div>
+                                    <div class="rating" id="teacher-rate">
+                                        <span class="rate" id="teacher-rate-span"></span>
+                                        <span class="total-rating" id="totalRating"></span>
+                                    </div>
+
+
+                                    <!--preview comment	-->
+                                    <button class="open-button" id="openForm" onclick="openForm()"> Feedback</button>
+
+                                    <div class="form-popup" id="myForm">
+                                        <form class="form-container">
+
+                                            <div class="form-group">
+                                                <textarea name="" cols="30" rows="10" id="feedBack"></textarea>
+                                            </div>
+
+                                            <button type="button" class="btn" id="sendFeedback">Feedback</button>
+                                            <button type="button" class="btn cancel" onclick="closeForm()">Close
+                                            </button>
+                                        </form>
+                                    </div>
+
+
+                                    <!--preview comment	-->
+                                    <div class="stars">
+
+
+                                    </div>
+                                    <div class="price" id="course-price"><span></span></div>
+                                </div>
+
+                                <div id="teacher-detail-image">
+
+                                </div>
+                            </div>
+                            <div class="text" id="teacher-description" style="width: 100%"></div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- End Course Detail Info Boxed -->
+
+                <div id="myCalendar" class="vanilla-calendar"></div>
+
+                <div id="avail-time"></div>
+
+                <!-- reviews students-->
+                <div id="reviews">
+<!--                    <div id="imageReviews"></div>-->
+                </div>
+                <!-- reviews students -->
+            </div>
+        </div>
+    </div>
+    <!-- End Instructor Page Section -->
+
+    <!-- Main Footer -->
+    <div th:insert="fragments/footer.html :: #footer"></div>
+
+</div>
+<!-- End pagewrapper -->
+
+<!-- Sidebar Nav -->
+<div th:insert="fragments/sidebar.html :: #sidebar"></div>
+<div id="popupWrapper">
+    <div id="popup">
+        <i id="closePopup" class="fa fa-2x fa-times" style="color: red"></i>
+
+        <div class="info-popup">
+            <div>Select From the list of available courses</div>
+            <div>
+                <select id="selectAvailabilityHoursForEnroll"></select>
+            </div>
+            <div><p>Are You sure?</p></div>
+            <div>
+                <button class="btn btn-success" id="acceptPopup">Yes</button>
+                <button class="btn btn-danger" id="cancelPopup">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="/js/jquery.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/appear.js"></script>
+<script src="/js/isotope.js"></script>
+<script src="/js/owl.js"></script>
+<script src="/js/wow.js"></script>
+<!--<script src="/js/jquery-ui.js"></script>-->
+<script src="/js/script.js"></script>
+<script src="/js/color-settings.js"></script>
+<script src="/js/teacherDetails.js"></script>
+
+</body>
+</html>

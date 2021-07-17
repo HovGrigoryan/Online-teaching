@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Akadimia HTML Template | Login</title>
+<!-- Stylesheets -->
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet">
+<link href="/css/responsive.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- Color Switcher Mockup -->
+<link href="/css/color-switcher-design.css" rel="stylesheet">
+<!-- Color Themes -->
+<link id="theme-color-file" href="/css/color-themes/theme-one.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+<link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="/js/respond.js"></script><![endif]-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script th:inline="javascript">
+		let user = [[${user}]];
+	</script>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+ 	
+    <!-- Preloader -->
+    <div class="preloader"></div>
+ 	
+	<!-- Main Header-->
+	<div th:insert="fragments/header.html :: #header"></div>
+    <!--End Main Header -->
+	
+	<!-- Sign Up Section -->
+    <section class="signup-section login-section" style="background-image:url(images/background/pattern-4.png)">
+    	<div class="auto-container">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo-3.png" alt="" /></a>
+			</div>
+        	<div class="inner-container">
+            	<h2>Welcome Back To <span class="theme_color">Akadimia</span></h2>
+				<div class="text">Sign In and Start Learning</div>
+				
+				<!-- Login Form -->
+				<div class="styled-form">
+					<form method="post" action="/login">
+						<div class="validation-error alert alert-danger">
+						</div>
+						<!-- Form Group -->
+						<div class="form-group">
+							<input type="email" name="email" placeholder="Email Address" required>
+						</div>
+						
+						<!-- Form Group -->
+						<div class="form-group">
+							<input type="password" name="password" placeholder="Password" required>
+						</div>
+
+						
+						<div class="form-group text-center">
+							<button type="submit" class="theme-btn btn-style-one"><span class="txt">Sign In Now</span></button>
+						</div>
+						
+						<div class="form-group">
+							<div class="users">New User? <a href="/student/register">Sign Up Now</a></div>
+						</div>
+						
+					</form>
+				</div>
+				
+				<!-- Social Boxed -->
+<!--				<div class="social-boxed text-center">-->
+<!--					<a href="login.html#"><span class="icon fa fa-facebook"></span>Continue with Facebook</a>-->
+<!--					<a class="linkedin" href="login.html#"><span class="icon fa fa-linkedin"></span>Continue with Linkedin</a>-->
+<!--					<a class="twitter" href="login.html#"><span class="icon fa fa-twitter"></span>Continue with Twitter</a>-->
+<!--				</div>-->
+				
+            </div>
+			
+			<!-- Copyright -->
+			<div class="copyright">Copyright © 2020 AuburnForest</div>
+			
+        </div>
+    </section>
+	<!-- End Sign Up Section -->
+	
+</div>
+<!-- End pagewrapper -->
+
+<div th:insert="fragments/sidebar.html :: #sidebar"></div>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/appear.js"></script>
+<script src="/js/isotope.js"></script>
+<script src="/js/owl.js"></script>
+<script src="/js/wow.js"></script>
+<script src="/js/jquery.countdown.js"></script>
+<!--<script src="/js/jquery-ui.js"></script>-->
+<script src="/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<title>Akadimia HTML Template | Instructor Profile</title>
+	<!-- Stylesheets -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+		  rel="stylesheet">
+	<!-- calendar -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/vanilla-calendar-min.css">
+
+	<!-- calendar -->
+
+
+	<!-- Color Switcher Mockup -->
+	<link href="css/color-switcher-design.css" rel="stylesheet">
+	<!-- Color Themes -->
+	<link id="theme-color-file" href="css/color-themes/theme-one.css" rel="stylesheet">
+
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+	<!-- Responsive -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+	<!--[if lt IE 9]>
+	<script src="js/respond.js"></script><![endif]-->
+
+</head>
+
+<body class="">
+<script th:inline="javascript">
+	let user = [[${user}]];
+	console.log(user);
+</script>
+
+<div class="page-wrapper">
+
+	<!-- Preloader -->
+	<div class="preloader"></div>
+
+	<!-- Main Header-->
+	<div th:insert="fragments/header.html :: #header"></div>
+
+
+	<!-- Instructor Page Section -->
+	<div class="instructor-page-section">
+		<div class="auto-container">
+			<div class="upper-content">
+				<div class="row clearfix">
+
+					<!-- Left Column -->
+					<div class="left-column col-lg-12 col-md-12 col-sm-12 mb-5" id="teacher-info-data">
+						<!-- Content -->
+
+						<div class="teacher-intro-video-profile" id="teacher-intro-video">
+
+						</div>
+
+						<div style="display: flex; flex-direction: column" class="teacher-info-wrapper-parent">
+							<div style="display:flex;" class="teacher-info-wrapper">
+								<div id="teacher-main-info" class="">
+
+								</div>
+
+								<div class="" id="teacher-content">
+
+								</div>
+							</div>
+							<div id="teacherDescription">
+
+							</div>
+						</div>
+
+
+
+
+					</div>
+					<div class="left-column col-lg-12 col-md-12 col-sm-12 mb-5">
+
+					</div>
+
+					<div class="clo-lg-12 col-md-12 col-sm-12">
+						<div class="fact-counter">
+							<div class="row clearfix">
+
+								<!-- Column -->
+								<div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+									<div class="inner">
+										<h5 class="counter-title">Hourly rate</h5>
+										<div class="count-outer count-box" >
+											<span id="counter-booking-count" class="count-text"></span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Column -->
+								<div class="column counter-column col-lg-6 col-md-6 col-sm-12">
+									<div class="inner">
+										<h5 class="counter-title">Balance</h5>
+										<div class="count-outer count-box">
+											<span class="count-text" id="balance"></span>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- calendar -->
+			<div>
+				<div id="myCalendar" class="vanilla-calendar"></div>
+			</div>
+
+			<!-- calendar -->
+
+			<div class="featured-section">
+				<div class="row clearfix" id="teacherUserInfo">
+
+
+
+				</div>
+				<div id="userBookedTime">
+
+				</div>
+
+			</div>
+
+			<!-- suggest booking -->
+			<div class="featured-section">
+				<div class="row clearfix" id="suggestBooking">
+
+
+
+				</div>
+
+
+			</div>
+			<!-- suggest booking -->
+
+
+		</div>
+	</div>
+	<!-- End Instructor Page Section -->
+
+	<div th:insert="fragments/footer.html :: #footer"></div>
+</div>
+<!-- End pagewrapper -->
+
+<div th:insert="fragments/sidebar.html :: #sidebar"></div>
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/appear.js"></script>
+<script src="/js/isotope.js"></script>
+<script src="/js/owl.js"></script>
+<script src="/js/wow.js"></script>
+<!--<script src="/js/jquery-ui.js"></script>-->
+<script src="/js/script.js"></script>
+<script src="/js/color-settings.js"></script>
+<script src="/js/vanilla-calendar-min.js"></script>
+<script src="/js/instructor-profile.js"></script>
+
+</body>
+</html>
